@@ -117,4 +117,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-For any inquiries, please contact Nishant at [your-email@example.com](mailto:nishantdev03@example.com).
+For any inquiries, please contact Nishant at [nishantde03@gmail.com](mailto:nishantdev03@gmail.com).
