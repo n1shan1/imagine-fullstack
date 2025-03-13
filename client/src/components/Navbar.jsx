@@ -16,7 +16,10 @@ const Navbar = () => {
       </Link>
       {!user ? (
         <div className="flex items-center gap-2 sm:gap-5 md:gap-6 ">
-          <p onClick={() => navigate("/")} className="cursor-pointer ">
+          <p
+            onClick={() => navigate("/")}
+            className="cursor-pointer hidden sm:block"
+          >
             Home
           </p>
           <p onClick={() => navigate("/about")} className="cursor-pointer ">
@@ -34,15 +37,19 @@ const Navbar = () => {
         </div>
       ) : (
         <div className="flex items-center gap-2 sm:gap-5 md:gap-6">
-          <p onClick={() => navigate("/")} className="cursor-pointer ">
+          <p
+            onClick={() => navigate("/")}
+            className="cursor-pointer hidden sm:block"
+          >
             Home
           </p>
-          <p onClick={() => navigate("/about")} className="cursor-pointer ">
+          <p onClick={() => navigate("/about")} className="cursor-pointer">
             About
           </p>
           <button className="flex items-center gap-2 px-4 sm:px-6 py-2 bg-zinc-900 text-white hover:bg-zinc-700 transition-all duration-400">
-            <p onClick={() => navigate("/buy")} className="">
-              Credits left: <span className="font-normal">{credit}</span>
+            <p onClick={() => navigate("/buy")} className="text-sm">
+              Credits left:{" "}
+              <span className="font-normal text-sm">{credit}</span>
             </p>
           </button>
           <p className="text-lg max-sm:hidden">Hi, {user.name}</p>
