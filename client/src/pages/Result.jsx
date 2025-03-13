@@ -36,7 +36,7 @@ const Result = () => {
         <p className={!loading ? "hidden" : ""}>Loading...</p>
       </div>
       {!imageLoaded && (
-        <div className="flex w-full max-w-xl text-sm p-0.5 mt-10">
+        <div className="flex w-full max-w-xl text-sm p-0.5 mt-10 flex-col md:flex-row gap-5">
           <input
             onChange={(e) => setInput(e.target.value)}
             type="text"
@@ -48,7 +48,7 @@ const Result = () => {
           />
           <button
             type="submit"
-            className="bg-black text-white px-6 py-2 border border-transparent  hover:opacity-90 transition-colors"
+            className="bg-black text-white px-6 py-2 border border-transparent  hover:opacity-90 transition-colors md:w-full w-[50%] mx-auto"
           >
             Generate
           </button>
