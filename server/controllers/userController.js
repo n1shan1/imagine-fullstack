@@ -90,8 +90,8 @@ export const loginUser = async (req, res) => {
       token,
     });
   } catch (error) {
-    console
-      .log(error)
+    console.log(error);
+    return res
       .status(500)
       .json({ success: false, message: "Internal server error." });
   }
@@ -101,7 +101,6 @@ export const userCredits = async (req, res) => {
   try {
     const { userId } = req.body;
     const user = await User.findById(userId);
-    console.log(user);
     if (!user) {
       return res
         .status(400)
@@ -155,7 +154,7 @@ export const paymentRazorpay = async (req, res) => {
 
       case "Business":
         plan = "Business";
-        credits = 20;
+        credits = 25;
         amount = 50;
         break;
 
